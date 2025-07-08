@@ -1,0 +1,84 @@
+body {
+  font-family: 'Georgia', serif;
+}
+
+/* Dark mode styles */
+body.dark {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+body.dark .hero {
+  background: linear-gradient(to bottom right, #1e293b, #111827);
+  color: white;
+}
+
+body.dark .poem-card {
+  background-color: #1f2937;
+  color: #f1f5f9;
+}
+
+body.dark .poem-card:hover {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+body.dark .modal > div,
+body.dark .poem-lines,
+body.dark .max-w-3xl {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+/* Poem card styling */
+.poem-card {
+  background-color: white;
+  transition: box-shadow 0.3s ease;
+}
+
+.poem-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.modal > div {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Scrollbar styling */
+.modal > div::-webkit-scrollbar {
+  width: 8px;
+}
+.modal > div::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.5);
+  border-radius: 4px;
+}
+
+/* Fade-up animation for poem lines */
+.fade-line {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 0.5s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Signature */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideInLeft 3s forwards;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

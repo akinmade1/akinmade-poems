@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poetic Expressions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <!-- Hero Section -->
+  <div class="hero min-h-screen w-full bg-gradient-to-br from-blue-900 to-red-600 text-white flex flex-col items-center justify-center text-center px-4">
+    <h1 class="text-5xl font-bold mb-4">Poetic Expressions</h1>
+    <p class="text-xl mb-4">Where words dance and emotions sing</p>
+    <button onclick="openAbout()" class="mt-2 bg-white text-blue-900 font-semibold py-2 px-6 rounded-full hover:bg-gray-100 transition">
+      About Me
+    </button>
+  </div>
+
+  <!-- Poems Grid -->
+  <div class="container mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-center mb-12">My Collection</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Poem Card -->
+      <a href="poems/why-worry.html" class="poem-card block p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold mb-2">Why Worry?</h3>
+        <p class="text-sm text-gray-500 mb-2">Published: June 24, 2025</p>
+        <p class="italic">"In 2125, I’ll be nowhere..."</p>
+      </a>
+
+      <a href="poems/yolo.html" class="poem-card block p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold mb-2">YOLO?</h3>
+        <p class="text-sm text-gray-500 mb-2">Published: July 1, 2025</p>
+        <p class="italic">"You only live once..."</p>
+      </a>
+
+      <a href="poems/flips.html" class="poem-card block p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold mb-2">It all Flips</h3>
+        <p class="text-sm text-gray-500 mb-2">Published: July 4, 2025</p>
+        <p class="italic">"This World is a mess..."</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- About Modal -->
+  <div id="about-modal" class="modal hidden fixed inset-0 bg-black bg-opacity-90 text-white overflow-y-auto z-50">
+    <div class="max-w-xl mx-auto my-16 p-6 bg-white text-black rounded-lg relative">
+      <button class="absolute top-4 right-4 text-red-500 text-2xl font-bold" onclick="closeAbout()">&times;</button>
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p>I’m a poet who captures thoughts, moments, and emotions through carefully woven words. These are pieces of me, for you to feel and reflect on.</p>
+    </div>
+  </div>
+
+  <!-- Theme Toggle -->
+  <div class="fixed bottom-4 right-4 z-50">
+    <button onclick="toggleTheme()" class="bg-gray-800 text-white p-3 rounded-full">🌓</button>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
